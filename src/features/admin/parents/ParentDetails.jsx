@@ -2,7 +2,6 @@ import { FiFileText, FiMail, FiPhone, FiUser } from "react-icons/fi";
 import BackButton from "../../../ui/BackButton";
 import Spinner from "../../../ui/Spinner";
 import Error from "../../../ui/Error";
-import ItemNotFound from "../../../ui/ItemNotFound";
 import DetailsSectionsHeader from "../../../ui/DetailsSectionsHeader";
 import ParentDetailsCards from "./ParentDetailsCards";
 import useBackTitle from "../../../hooks/useBackTitle";
@@ -18,7 +17,6 @@ function ParentDetails() {
 
   if (isLoading) return <Spinner />;
   if (error) return <Error message={error.message} />;
-  if (!parent) return <ItemNotFound item="parent" />;
 
   const {
     id,
@@ -84,14 +82,14 @@ function ParentDetails() {
         <div className="flex items-center justify-between my-4">
           <DetailsSectionsHeader>Linked Students</DetailsSectionsHeader>
 
-          <Modal>
+          {/* <Modal>
             <Modal.Open opens="assign-student-to-parent">
               <AssignButton title="Student" />
             </Modal.Open>
             <Modal.Window name="assign-student-to-parent">
-              {/* <AssignStudentToParentForm studentID={id} /> */}
+              <AssignStudentToParentForm studentID={id} />
             </Modal.Window>
-          </Modal>
+          </Modal> */}
         </div>
         {students.length === 0 ? (
           <div className="text-sm text-amber-600 bg-amber-50 px-4 py-3 rounded-xl mb-4">

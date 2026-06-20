@@ -1,5 +1,4 @@
 import Header from "../../ui/Header";
-// import AddButton from "../../ui/AddButton";
 import ParentStateCards from "../../features/admin/Parents/ParentStateCards";
 import ParentsTable from "../../features/admin/Parents/ParentsTable";
 import AddParent from "../../features/admin/Parents/AddParent";

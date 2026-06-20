@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 import BackButton from "../../../ui/BackButton";
 import Spinner from "../../../ui/Spinner";
 import Error from "../../../ui/Error";
-import ItemNotFound from "../../../ui/ItemNotFound";
 import Modal from "../../../ui/Modal";
 import ConfirmDelete from "../../../ui/ConfirmDelete";
 import Button from "../../../ui/Button";
@@ -39,7 +38,6 @@ function TeacherDetails() {
 
   if (isLoading) return <Spinner />;
   if (error) return <Error message={error.message} />;
-  if (!teacher) return <ItemNotFound item="Teacher" />;
 
   const {
     id,
